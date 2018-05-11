@@ -1,16 +1,14 @@
-* {
+body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-size: 100%;
   line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 55vw;
   overflow: hidden;
 }
@@ -20,21 +18,20 @@ body {
   width: 100vw;
   min-height: 55vw;
   overflow: hidden;
-
 }
 
 .top-wrap {
-  position: absolute;
+  position: absolute; 
   width: 100vw;
   min-height: 55vw;
 }
 
-.text-body {
+.layer .text-body {
   position: absolute;
   text-align: center;
   width: 25%;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 .layer img {
@@ -46,35 +43,32 @@ body {
 }
 
 .layer h1 {
-  font-size: 3.5vw;
-}
-
-.layer p {
-  margin-top: 10px;
-  font-size: 1.75vw;
+  font-size: 2em;
 }
 
 .bottom {
-  z-index: 1;
   background: #222;
+  z-index: 1;
 }
 
 .bottom .text-body {
-  right: 4%;
+  right: 5%;
   color: #fff;
 }
 
-.bottom h1 {
-  color: #fdab00;
+.bottom .text-body h1 {
+  color: #FDAB00;
 }
 
 .top {
-  z-index: 2;
   background: rgb(164, 177, 189);
+  width: 50vw;
+  z-index: 2;
 }
 
 .top .text-body {
-  left: 4%;
+  left: 5%;
+  color: #222;
 }
 
 .top img {
@@ -83,16 +77,16 @@ body {
 }
 
 .handle {
-  z-index: 3;
   position: absolute;
   display: block;
-  background: #fdab00;
-  width: 2px;
+  background-color: #FDAB00;
+  width: 5px;
   left: 50%;
   top: 50%;
   transform: rotate(30deg) translateY(-50%);
-  height: 150%;
+  height: 200%;
   transform-origin: top;
+  z-index: 3;
 }
 
 .top {
@@ -106,4 +100,8 @@ body {
   margin-left: 1000px;
 }
 
-
+@media(max-width: 768px) {
+  body {
+    font-size: 75%;
+  }
+}
